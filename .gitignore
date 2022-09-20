@@ -1,0 +1,4 @@
+#Ignora los arcivos Corel
+*.cdr
+
+node_modules
