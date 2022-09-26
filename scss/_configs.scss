@@ -2,12 +2,11 @@
   box-shadow: 0 0 3px 3px $theme;
 }
 
-@mixin avatarContainer($pad: 10px, $bcolor: rgb(88, 88, 88)) {
+@mixin container($bcolor: rgb(88, 88, 88)) {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: fit-content;
-  padding: $pad $pad 0 $pad;
-  border-radius: 10px;
+  padding: 10px 10px 0 10px;
+  border-radius: 30px;
   background-color: $bcolor;
 }
