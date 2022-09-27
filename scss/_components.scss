@@ -1,32 +1,61 @@
 @use "./configs";
-.fasesContainer {
-  @include configs.container($bcolor: rgb(43, 43, 43));
 
-  .containerOponents {
-    @include configs.container;
-    margin-bottom: 10px;
-    .playerData {
-      display: flex;
-      align-items: center; 
+.fixtureContainer {
+  display: flex;
+
+  .faseContainer {
+    @include configs.container($bcolor: rgb(43, 43, 43));
+
+    .containerOponents {
+      @include configs.container;
       margin-bottom: 10px;
-      .userAvatar {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;       
-        @include configs.state;
-      }
-      .points {
-        font-family: "Cabin", sans-serif;
-        font-size: 30px;
-        color: white;
-        background-color: rgb(43, 43, 43);
-        width: 50px;
-        border: 0;
-        border-radius: 10px;
-        margin-left: 10px;
-        text-align: center;
-        height: 40px;
+
+      .containerPlayer {
+        display: flex;
+        align-items: center;
+
+
+        .playerData {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 10px;
+          
+          .name{
+            @include configs.fontFixture;
+            font-size: small;
+          }
+          .userAvatar {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          }
+        }
+        .points {
+          @include configs.fontFixture;
+          font-size: 30px;
+          background-color: rgb(43, 43, 43);
+          width: 50px;
+          border: 0;
+          border-radius: 10px;
+          margin-left: 10px;
+          text-align: center;
+          height: 40px;
+        }
       }
     }
   }
+}
+
+.empty{
+  @include configs.state;
+  opacity: 0.5;
+}
+
+.winner{
+  @include configs.state($theme: rgb(217, 255, 0));
+}
+
+.playing{
+  @include configs.state;
 }

@@ -9,4 +9,11 @@
   padding: 10px 10px 0 10px;
   border-radius: 30px;
   background-color: $bcolor;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+@mixin fontFixture {
+  font-family: "Cabin", sans-serif;
+  color: white;
 }

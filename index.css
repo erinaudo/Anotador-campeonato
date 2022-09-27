@@ -1,35 +1,51 @@
-.fasesContainer {
+.fixtureContainer {
+  display: flex;
+}
+.fixtureContainer .faseContainer {
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 10px 10px 0 10px;
   border-radius: 30px;
   background-color: rgb(43, 43, 43);
+  justify-content: space-around;
+  margin: 15px;
 }
-.fasesContainer .containerOponents {
+.fixtureContainer .faseContainer .containerOponents {
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 10px 10px 0 10px;
   border-radius: 30px;
   background-color: rgb(88, 88, 88);
+  justify-content: space-around;
+  margin: 15px;
   margin-bottom: 10px;
 }
-.fasesContainer .containerOponents .playerData {
+.fixtureContainer .faseContainer .containerOponents .containerPlayer {
   display: flex;
+  align-items: center;
+}
+.fixtureContainer .faseContainer .containerOponents .containerPlayer .playerData {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
 }
-.fasesContainer .containerOponents .playerData .userAvatar {
+.fixtureContainer .faseContainer .containerOponents .containerPlayer .playerData .name {
+  font-family: "Cabin", sans-serif;
+  color: white;
+  font-size: small;
+}
+.fixtureContainer .faseContainer .containerOponents .containerPlayer .playerData .userAvatar {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 3px 3px white;
 }
-.fasesContainer .containerOponents .playerData .points {
+.fixtureContainer .faseContainer .containerOponents .containerPlayer .points {
   font-family: "Cabin", sans-serif;
-  font-size: 30px;
   color: white;
+  font-size: 30px;
   background-color: rgb(43, 43, 43);
   width: 50px;
   border: 0;
@@ -37,6 +53,19 @@
   margin-left: 10px;
   text-align: center;
   height: 40px;
+}
+
+.empty {
+  box-shadow: 0 0 3px 3px white;
+  opacity: 0.5;
+}
+
+.winner {
+  box-shadow: 0 0 3px 3px rgb(217, 255, 0);
+}
+
+.playing {
+  box-shadow: 0 0 3px 3px white;
 }
 
 /*# sourceMappingURL=index.css.map */
