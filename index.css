@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .fixtureContainer {
   display: flex;
 }
@@ -45,6 +51,7 @@
 .fixtureContainer .faseContainer .containerOponents .containerPlayer .points {
   font-family: "Cabin", sans-serif;
   color: white;
+  font-size: small;
   font-size: 30px;
   background-color: rgb(43, 43, 43);
   width: 50px;
@@ -55,17 +62,27 @@
   height: 40px;
 }
 
+.playing {
+  box-shadow: 0 0 3px 3px white;
+}
+
 .empty {
   box-shadow: 0 0 3px 3px white;
   opacity: 0.5;
 }
 
-.winner {
-  box-shadow: 0 0 3px 3px rgb(217, 255, 0);
+.looser {
+  box-shadow: 0 0 3px 3px red;
+  opacity: 0.8;
+  background-color: rgb(160, 0, 0);
 }
 
-.playing {
-  box-shadow: 0 0 3px 3px white;
+.winner {
+  box-shadow: 0 0 5px 5px yellow;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: yellowgreen;
 }
 
 /*# sourceMappingURL=index.css.map */

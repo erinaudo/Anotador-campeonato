@@ -1,5 +1,13 @@
 @use "./configs";
 
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+//CONTENEDORES FIXTURE
 .fixtureContainer {
   display: flex;
 
@@ -14,16 +22,14 @@
         display: flex;
         align-items: center;
 
-
         .playerData {
           display: flex;
           flex-direction: column;
           align-items: center;
           margin-bottom: 10px;
-          
-          .name{
+
+          .name {
             @include configs.fontFixture;
-            font-size: small;
           }
           .userAvatar {
             height: 50px;
@@ -47,15 +53,26 @@
   }
 }
 
-.empty{
+//ESTADOS DEL JUGADOR
+.playing {
+  @include configs.state;
+}
+
+.empty {
   @include configs.state;
   opacity: 0.5;
 }
 
-.winner{
-  @include configs.state($theme: rgb(217, 255, 0));
+.looser{
+  @include configs.state($theme: red);
+  opacity: 0.8;
+  background-color: rgb(160, 0, 0);
+  
 }
-
-.playing{
-  @include configs.state;
+.winner {
+  @include configs.state($theme: yellow, $shadow: 5px);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: yellowgreen;
 }

@@ -1,5 +1,5 @@
-@mixin state($theme: white) {
-  box-shadow: 0 0 3px 3px $theme;
+@mixin state($theme: white, $shadow: 3px) {
+  box-shadow: 0 0 $shadow $shadow $theme;
 }
 
 @mixin container($bcolor: rgb(88, 88, 88)) {
@@ -13,7 +13,8 @@
   margin: 15px;
 }
 
-@mixin fontFixture {
+@mixin fontFixture($fontColor: white, $fontSize: small) {
   font-family: "Cabin", sans-serif;
-  color: white;
+  color: $fontColor;
+  font-size: $fontSize;
 }

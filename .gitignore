@@ -1,4 +1,4 @@
 #Ignora los arcivos Corel
 *.cdr
-
+Logica.txt
 node_modules
